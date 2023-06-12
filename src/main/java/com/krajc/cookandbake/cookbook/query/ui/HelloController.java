@@ -1,4 +1,4 @@
-package com.krajc.cookandbake.ui.controller;
+package com.krajc.cookandbake.cookbook.query.ui;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
