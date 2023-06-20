@@ -1,2 +1,39 @@
-###
+### Hello world test
 GET http://localhost:9090/hello
+
+### Get all recipes
+GET http://localhost:9090/app/recipes
+
+### Post recipe with body
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+
+{
+  "title": "Rosol",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+  "author": {
+    "name": "Tomasz Zoladz"
+  },
+  "ingredients": [
+    {
+      "name": "Kurczak"
+    },
+    {
+      "name": "Przyprawy"
+    },
+    {
+      "name": "Warzywa"
+    }
+  ],
+  "appliances": [
+    {
+      "name": "Garnek"
+    },
+    {
+      "name": "Kuchenka"
+    },
+    {
+      "name": "Chochla"
+    }
+  ]
+}
