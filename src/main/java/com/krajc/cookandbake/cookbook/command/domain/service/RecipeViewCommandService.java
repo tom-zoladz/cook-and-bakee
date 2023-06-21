@@ -42,4 +42,8 @@ public class RecipeViewCommandService {
         else return null;
     }
 
+    public void deleteById(String id) {
+        repository.deleteById(UUID.fromString(id));
+    }
+
 }

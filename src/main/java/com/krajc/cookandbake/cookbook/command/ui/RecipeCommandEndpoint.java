@@ -38,4 +38,9 @@ public class RecipeCommandEndpoint {
                 ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseBody) :
                 ResponseEntity.ok(responseBody);
     }
+
+    @DeleteMapping
+    public void deleteRecipe(@RequestParam String id) {
+        service.deleteById(id);
+    }
 }

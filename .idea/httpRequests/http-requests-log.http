@@ -1,0 +1,680 @@
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T193357.200.json
+
+###
+
+DELETE http://localhost:9090/app/recipes?id=714f7c19-ca02-432c-8622-823b6aa5ace0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T193334.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T190443.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/description
+Content-Type: application/json
+Content-Length: 148
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą kiszoną"
+}
+
+<> 2023-06-21T190438.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/description
+Content-Type: application/json
+Content-Length: 139
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą"
+}
+
+<> 2023-06-21T190423.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/description
+Content-Type: application/json
+Content-Length: 139
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace1",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą"
+}
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T190407.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/description
+Content-Type: application/json
+Content-Length: 139
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą"
+}
+
+<> 2023-06-21T190359.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T190303.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T185207.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Śmieszny bigos z warzywkami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T185145.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace1&title=Śmieszny bigos z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T185120.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace1&title=Śmieszny bigos z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T184923.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace1&title=Śmieszny bigos z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Śmieszny bigos z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T184737.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T184720.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T184201.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Bigos z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T184138.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183726.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183717.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19ca02432c8622823b6aa5ace0&title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183702.500.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183656.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/change_title?id=714f7c19ca02432c8622823b6aa5ace0?title=Bigos
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183540.400.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183531.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19ca02432c8622823b6aa5ace0
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183436.400.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19ca02432c8622823b6aa5ace0?title=Bigos
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183423.400.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183414.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19ca02432c8622823b6aa5ace0?title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183158.400.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0?title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183102.400.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T183050.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19ca02432c8622823b6aa5ace0?title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T182717.400.json
+
+###
+
+PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0?title=Bigos na swinskim ryju z warzywami
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T182651.400.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-21T182627.200.json
+
+###
+
+PATCH http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 105
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "title": "Bigos na swinskim ryju z warzywami"
+}
+
+<> 2023-06-20T202411.500.json
+
+###
+
+PATCH http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 105
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "title": "Bigos na swinskim ryju z warzywami"
+}
+
+<> 2023-06-20T201303.500.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-20T201050.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-20T185003.200.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 485
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "recipeId": "28934769-2c7e-4b9a-8e2d-bbe6a9aac171",
+  "title": "Bigos na swinskim ryju",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+  "author": {
+    "name": "Tomasz Zoladz"
+  },
+  "ingredients": [
+    {
+      "name": "Kurczak"
+    },
+    {
+      "name": "Przyprawy"
+    },
+    {
+      "name": "Warzywa"
+    }
+  ],
+  "appliances": [
+    {
+      "name": "Garnek"
+    },
+    {
+      "name": "Kuchenka"
+    },
+    {
+      "name": "Chochla"
+    }
+  ]
+}
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-20T184748.200.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-20T184414.200.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 414
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Rosol",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+  "author": {
+    "name": "Tomasz Zoladz"
+  },
+  "ingredients": [
+    {
+      "name": "Kurczak"
+    },
+    {
+      "name": "Przyprawy"
+    },
+    {
+      "name": "Warzywa"
+    }
+  ],
+  "appliances": [
+    {
+      "name": "Garnek"
+    },
+    {
+      "name": "Kuchenka"
+    },
+    {
+      "name": "Chochla"
+    }
+  ]
+}
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 414
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Rosol",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+  "author": {
+    "name": "Tomasz Zoladz"
+  },
+  "ingredients": [
+    {
+      "name": "Kurczak"
+    },
+    {
+      "name": "Przyprawy"
+    },
+    {
+      "name": "Warzywa"
+    }
+  ],
+  "appliances": [
+    {
+      "name": "Garnek"
+    },
+    {
+      "name": "Kuchenka"
+    },
+    {
+      "name": "Chochla"
+    }
+  ]
+}
+
+<> 2023-06-20T184123.500.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+Content-Length: 414
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "title": "Rosol",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+  "author": {
+    "name": "Tomasz Zoladz"
+  },
+  "ingredients": [
+    {
+      "name": "Kurczak"
+    },
+    {
+      "name": "Przyprawy"
+    },
+    {
+      "name": "Warzywa"
+    }
+  ],
+  "appliances": [
+    {
+      "name": "Garnek"
+    },
+    {
+      "name": "Kuchenka"
+    },
+    {
+      "name": "Chochla"
+    }
+  ]
+}
+
+<> 2023-06-20T184000.500.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Length: 342
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"title" : "Rosol",
+"description" : "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+"author" : {
+    "name" : "Tomasz Zoladz"
+    },
+"ingredients" : [
+    {"name" : "Kurczak"},
+    {"name" : "Przyprawy"},
+    {"name" : "Warzywa"}
+],
+"appliances" : [
+    {"name" : "Garnek"},
+    {"name" : "Kuchenka"},
+    {"name" : "Chochla"}
+]
+}
+
+<> 2023-06-20T183137.415.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Length: 356
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"title" : "Rosol",
+"description" : "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+"author" : {
+    "name" : "Tomasz Zoladz"
+    },
+"ingredients" : [
+    {"name" : "Kurczak"},
+    {"name" : "Przyprawy"},
+    {"name" : "Warzywa"}
+],
+    {"name" : "appliances" : [
+    {"name" : "Garnek"},
+    {"name" : "Kuchenka"},
+    {"name" : "Chochla"}
+]
+}
+
+<> 2023-06-20T182916.415.json
+
+###
+
+POST http://localhost:9090/app/recipes
+Content-Length: 231
+Content-Type: */*; charset=UTF-8
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"title" : "Rosol",
+"description" : "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
+"author" : "Tomasz Zoladz",
+"ingredients" : [
+"Kurczak",
+"Przyprawy",
+"Warzywa"
+],
+"appliances" : [
+"Garnek",
+"Kuchenka",
+"Chochla"
+]
+}
+
+<> 2023-06-20T182453.415.json
+
+###
+
+GET http://localhost:9090/app/recipes
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-06-20T182450.200.json
+
+###
+
