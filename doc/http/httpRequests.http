@@ -40,3 +40,12 @@ Content-Type: application/json
 
 ### Patch recipe with title
 PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Śmieszny bigos z warzywkami
+
+### Patch recipe with description
+PATCH http://localhost:9090/app/recipes/description
+Content-Type: application/json
+
+{
+  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
+  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą kiszoną"
+}
