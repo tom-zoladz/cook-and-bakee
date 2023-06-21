@@ -2,10 +2,9 @@ package com.krajc.cookandbake.cookbook.command.ui;
 
 import com.krajc.cookandbake.cookbook.command.domain.model.RecipeView;
 import com.krajc.cookandbake.cookbook.command.domain.service.RecipeViewCommandService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/app/recipes")
@@ -18,7 +17,16 @@ public class RecipeCommandEndpoint {
     }
 
     @PostMapping
-    public void postRecipe(@RequestBody RecipeView recipeView) {
-        service.save(recipeView);
+    public ResponseEntity<RecipeView> postRecipe(@RequestBody RecipeView recipeView) {
+        RecipeView responseBody = service.save(recipeView);
+        return ResponseEntity.ok(responseBody);
+    }
+
+    @PatchMapping("/title")
+    public ResponseEntity<RecipeView> updateRecipe(@RequestParam String id, @RequestParam String title) {
+        RecipeView responseBody = service.updateTitle(id, title);
+        return responseBody==null ?
+                ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseBody) :
+                ResponseEntity.ok(responseBody);
     }
 }
