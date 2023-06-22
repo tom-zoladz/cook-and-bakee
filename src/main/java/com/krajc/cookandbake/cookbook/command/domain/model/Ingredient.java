@@ -4,12 +4,12 @@ import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.IngredientJpa;
 
 import java.util.UUID;
 
-public record IngredientView(
+public record Ingredient(
         UUID id,
         String name
 ) {
-    public static IngredientView getFromJpa(IngredientJpa ingredientJpa) {
-        return new IngredientView(ingredientJpa.getId(), ingredientJpa.getName());
+    public static Ingredient getFromJpa(IngredientJpa ingredientJpa) {
+        return new Ingredient(ingredientJpa.getId(), ingredientJpa.getName());
     }
 
     public IngredientJpa toJpa() {

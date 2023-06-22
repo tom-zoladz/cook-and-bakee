@@ -2,12 +2,12 @@ package com.krajc.cookandbake.cookbook.command.domain.model;
 
 import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.ApplianceJpa;
 
-public record ApplianceView(
+public record Appliance(
         Long id,
         String name
 ) {
-    public static ApplianceView getFromJpa(ApplianceJpa applianceJpa) {
-        return new ApplianceView(applianceJpa.getId(), applianceJpa.getName());
+    public static Appliance getFromJpa(ApplianceJpa applianceJpa) {
+        return new Appliance(applianceJpa.getId(), applianceJpa.getName());
     }
 
     public ApplianceJpa toJpa() {

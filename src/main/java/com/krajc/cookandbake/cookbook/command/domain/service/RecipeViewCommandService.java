@@ -1,6 +1,6 @@
 package com.krajc.cookandbake.cookbook.command.domain.service;
 
-import com.krajc.cookandbake.cookbook.command.domain.model.RecipeView;
+import com.krajc.cookandbake.cookbook.command.domain.model.Recipe;
 import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.DescriptionJpa;
 import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.RecipeJpa;
 import com.krajc.cookandbake.cookbook.infrastructure.jpa.repository.RecipeJpaRepository;
@@ -17,27 +17,27 @@ public class RecipeViewCommandService {
         this.repository = repository;
     }
 
-    public RecipeView save(RecipeView recipeView) {
-        repository.save(recipeView.toJpa());
-        return recipeView;
+    public Recipe save(Recipe recipe) {
+        repository.save(recipe.toJpa());
+        return recipe;
     }
-    public RecipeView updateTitle(String id, String title) {
+    public Recipe updateTitle(String id, String title) {
         Optional<RecipeJpa> recipeFromRepo = repository.findById(UUID.fromString(id));
         if (recipeFromRepo.isPresent()) {
             RecipeJpa recipeJpa = recipeFromRepo.get();
             recipeJpa.setTitle(title);
             repository.save(recipeJpa);
-            return RecipeView.getFromJpa(recipeJpa);
+            return Recipe.getFromJpa(recipeJpa);
         }
         else return null;
     }
-    public RecipeView updateDescription(DescriptionJpa descriptionJpa) {
+    public Recipe updateDescription(DescriptionJpa descriptionJpa) {
         Optional<RecipeJpa> recipeFromRepo = repository.findById(descriptionJpa.recipeId());
         if (recipeFromRepo.isPresent()) {
             RecipeJpa recipeJpa = recipeFromRepo.get();
             recipeJpa.setDescription(descriptionJpa.description());
             repository.save(recipeJpa);
-            return RecipeView.getFromJpa(recipeJpa);
+            return Recipe.getFromJpa(recipeJpa);
         }
         else return null;
     }

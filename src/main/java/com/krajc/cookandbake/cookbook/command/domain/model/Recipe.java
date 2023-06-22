@@ -5,27 +5,27 @@ import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.RecipeJpa;
 import java.util.List;
 import java.util.UUID;
 
-public record RecipeView(
+public record Recipe(
     UUID id,
     String title,
     String description,
-    AuthorView author,
-    List<IngredientView> ingredients,
-    List<ApplianceView> appliances
+    Author author,
+    List<Ingredient> ingredients,
+    List<Appliance> appliances
 ) {
-    public static RecipeView getFromJpa(RecipeJpa recipeJpa) {
-        return new RecipeView(
+    public static Recipe getFromJpa(RecipeJpa recipeJpa) {
+        return new Recipe(
                 recipeJpa.getId(),
                 recipeJpa.getTitle(),
                 recipeJpa.getDescription(),
-                AuthorView.getFromJpa(recipeJpa.getAuthor()),
+                Author.getFromJpa(recipeJpa.getAuthor()),
                 recipeJpa.getIngredients()
                         .stream()
-                        .map(IngredientView::getFromJpa)
+                        .map(Ingredient::getFromJpa)
                         .toList(),
                 recipeJpa.getAppliances()
                         .stream()
-                        .map(ApplianceView::getFromJpa)
+                        .map(Appliance::getFromJpa)
                         .toList()
         );
     }
@@ -37,11 +37,11 @@ public record RecipeView(
                 this.author.toJpa(),
                 this.ingredients
                         .stream()
-                        .map(IngredientView::toJpa)
+                        .map(Ingredient::toJpa)
                         .toList(),
                 this.appliances
                         .stream()
-                        .map(ApplianceView::toJpa)
+                        .map(Appliance::toJpa)
                         .toList()
         );
     }
