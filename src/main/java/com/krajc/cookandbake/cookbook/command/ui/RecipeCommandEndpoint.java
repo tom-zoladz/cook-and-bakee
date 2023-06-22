@@ -40,7 +40,10 @@ public class RecipeCommandEndpoint {
     }
 
     @DeleteMapping
-    public void deleteRecipe(@RequestParam String id) {
-        service.deleteById(id);
+    public ResponseEntity<Void> deleteRecipe(@RequestParam String id) {
+        if (service.deleteById(id)) {
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 }

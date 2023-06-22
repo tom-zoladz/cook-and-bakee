@@ -42,8 +42,13 @@ public class RecipeViewCommandService {
         else return null;
     }
 
-    public void deleteById(String id) {
-        repository.deleteById(UUID.fromString(id));
+    public boolean deleteById(String id) {
+        Optional<RecipeJpa> recipeFromRepo = repository.findById(UUID.fromString(id));
+        if (recipeFromRepo.isPresent()) {
+            repository.deleteById(UUID.fromString(id));
+            return true;
+        }
+        return false;
     }
 
 }
