@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 public record RecipeView(
-    UUID recipeId,
+    UUID id,
     String title,
     String description,
     AuthorView author,
@@ -15,7 +15,7 @@ public record RecipeView(
 ) {
     public static RecipeView getFromJpa(RecipeJpa recipeJpa) {
         return new RecipeView(
-                recipeJpa.getRecipeId(),
+                recipeJpa.getId(),
                 recipeJpa.getTitle(),
                 recipeJpa.getDescription(),
                 AuthorView.getFromJpa(recipeJpa.getAuthor()),

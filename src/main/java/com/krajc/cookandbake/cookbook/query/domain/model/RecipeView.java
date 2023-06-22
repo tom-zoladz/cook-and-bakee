@@ -5,10 +5,8 @@ import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.RecipeJpa;
 import java.util.List;
 import java.util.UUID;
 
-import static java.util.stream.Collectors.toList;
-
 public record RecipeView(
-        UUID recipeId,
+        UUID id,
         String title,
         String description,
         AuthorView author,
@@ -17,7 +15,7 @@ public record RecipeView(
 ) {
     public static RecipeView getFromJpa(RecipeJpa recipeJpa) {
         return new RecipeView(
-                recipeJpa.getRecipeId(),
+                recipeJpa.getId(),
                 recipeJpa.getTitle(),
                 recipeJpa.getDescription(),
                 AuthorView.getFromJpa(recipeJpa.getAuthor()),

@@ -6,15 +6,17 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "Recipe")
 public class RecipeJpa {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID recipeId;
+    @Column(name = "recipe_id")
+    private UUID id;
     private String title;
     private String description;
 
     @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "author_id")
     private AuthorJpa author;
 
     @ManyToMany(cascade = CascadeType.ALL)
@@ -40,12 +42,12 @@ public class RecipeJpa {
         this.appliances = appliances;
     }
 
-    public UUID getRecipeId() {
-        return recipeId;
+    public UUID getId() {
+        return id;
     }
 
-    public void setRecipeId(UUID id) {
-        this.recipeId = id;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getTitle() {

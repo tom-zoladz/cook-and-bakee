@@ -6,13 +6,14 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "Author")
 public class AuthorJpa {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID authorId;
+    @Column(name = "author_id")
+    private UUID id;
     private String name;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany//(mappedBy = "author")
     private List<RecipeJpa> recipes;
 
     public AuthorJpa() {
@@ -22,17 +23,12 @@ public class AuthorJpa {
         this.name = name;
     }
 
-    public AuthorJpa(String name, List<RecipeJpa> recipes) {
-        this.name = name;
-        this.recipes = recipes;
+    public UUID getId() {
+        return id;
     }
 
-    public UUID getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(UUID id) {
-        this.authorId = id;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {

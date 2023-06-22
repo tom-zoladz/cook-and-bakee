@@ -4,12 +4,13 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table
+@Table(name = "Appliance")
 public class ApplianceJpa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long applianceId;
+    @Column(name = "appliance_id")
+    private Long id;
     private String name;
 
     public ApplianceJpa() {
@@ -19,12 +20,12 @@ public class ApplianceJpa {
         this.name = name;
     }
 
-    public Long getApplianceId() {
-        return applianceId;
+    public Long getId() {
+        return id;
     }
 
-    public void setApplianceId(Long applianceId) {
-        this.applianceId = applianceId;
+    public void setId(Long applianceId) {
+        this.id = applianceId;
     }
 
     public String getName() {

@@ -5,7 +5,7 @@ import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.IngredientJpa;
 import java.util.UUID;
 
 public record IngredientView(
-        UUID authorId,
+        UUID id,
         String name
 ) {
     public static IngredientView getFromJpa(IngredientJpa ingredientJpa) {

@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.UUID;
 
 public record AuthorView(
-        UUID authorId,
+        UUID id,
         String name,
         List<RecipeView> recipes
 ) {
     public static AuthorView getFromJpa(AuthorJpa authorJpa) {
         return new AuthorView(
-                authorJpa.getAuthorId(),
+                authorJpa.getId(),
                 authorJpa.getName(),
                 authorJpa.getRecipes()
                         .stream()

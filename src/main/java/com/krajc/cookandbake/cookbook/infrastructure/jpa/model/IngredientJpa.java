@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "Ingredient")
 public class IngredientJpa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "ingredient_id")
     private UUID id;
     private String name;
 
