@@ -10,10 +10,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class RecipeViewCommandService {
+public class RecipeCommandService {
     RecipeJpaRepository repository;
 
-    public RecipeViewCommandService(RecipeJpaRepository repository) {
+    public RecipeCommandService(RecipeJpaRepository repository) {
         this.repository = repository;
     }
 

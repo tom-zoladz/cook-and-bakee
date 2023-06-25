@@ -1,7 +1,7 @@
 package com.krajc.cookandbake.cookbook.command.ui;
 
 import com.krajc.cookandbake.cookbook.command.domain.model.Recipe;
-import com.krajc.cookandbake.cookbook.command.domain.service.RecipeViewCommandService;
+import com.krajc.cookandbake.cookbook.command.domain.service.RecipeCommandService;
 import com.krajc.cookandbake.cookbook.infrastructure.jpa.model.DescriptionJpa;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/app/recipes")
 public class RecipeCommandEndpoint {
 
-    RecipeViewCommandService service;
+    RecipeCommandService service;
 
-    public RecipeCommandEndpoint(RecipeViewCommandService service) {
+    public RecipeCommandEndpoint(RecipeCommandService service) {
         this.service = service;
     }
 
