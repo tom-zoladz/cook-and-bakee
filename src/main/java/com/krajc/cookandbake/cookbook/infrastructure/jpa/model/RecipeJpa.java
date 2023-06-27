@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Recipe")
+@Table(name = "recipe")
 public class RecipeJpa {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -29,18 +29,6 @@ public class RecipeJpa {
     public RecipeJpa() {
     }
 
-    public RecipeJpa(
-            String title,
-            String description,
-            AuthorJpa author,
-            List<IngredientJpa> ingredients,
-            List<ApplianceJpa> appliances) {
-        this.title = title;
-        this.description = description;
-        this.author = author;
-        this.ingredients = ingredients;
-        this.appliances = appliances;
-    }
 
     public UUID getId() {
         return id;

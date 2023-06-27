@@ -4,51 +4,35 @@ GET http://localhost:9090/hello
 ### Get all recipes
 GET http://localhost:9090/app/recipes
 
+### Get recipe by ID
+GET http://localhost:9090/app/recipes/c70df1a1-945e-4b4f-8ae1-a42f7d295f27
+
 ### Post recipe with body
 POST http://localhost:9090/app/recipes
 Content-Type: application/json
 
 {
-  "title": "Rosol",
-  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
-  "author": {
-    "name": "Tomasz Zoladz"
-  },
-  "ingredients": [
-    {
-      "name": "Kurczak"
-    },
-    {
-      "name": "Przyprawy"
-    },
-    {
-      "name": "Warzywa"
-    }
-  ],
-  "appliances": [
-    {
-      "name": "Garnek"
-    },
-    {
-      "name": "Kuchenka"
-    },
-    {
-      "name": "Chochla"
-    }
-  ]
+  "title": "Salatka",
+  "description": "Zmieszac wszystkie skladniki dokladnie",
+  "authorId": "40bb900f-91ab-4614-abb9-a642da9c1181",
+  "ingredientIds": [],
+  "applianceIds": []
 }
 
-### Patch recipe with title
-PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Śmieszny bigos z warzywkami
 
-### Patch recipe with description
-PATCH http://localhost:9090/app/recipes/description
+
+
+
+### Post author with body
+POST http://localhost:9090/app/authors
 Content-Type: application/json
 
 {
-  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
-  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą kiszoną"
+  "name": "Stanisław Nowak"
 }
 
-### Delete recipe by ID
-DELETE http://localhost:9090/app/recipes?id=714f7c19-ca02-432c-8622-823b6aa5ace0
+### Get all authors
+GET http://localhost:9090/app/authors
+
+### Get author by ID
+GET http://localhost:9090/app/authors/5c03d221-701d-42bf-bf66-8361b5bfd933

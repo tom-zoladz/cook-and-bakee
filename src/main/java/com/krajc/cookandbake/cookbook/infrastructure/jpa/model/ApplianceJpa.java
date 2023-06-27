@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Appliance")
+@Table(name = "appliance")
 public class ApplianceJpa {
 
     @Id
@@ -14,10 +14,6 @@ public class ApplianceJpa {
     private String name;
 
     public ApplianceJpa() {
-    }
-
-    public ApplianceJpa(String name) {
-        this.name = name;
     }
 
     public Long getId() {
