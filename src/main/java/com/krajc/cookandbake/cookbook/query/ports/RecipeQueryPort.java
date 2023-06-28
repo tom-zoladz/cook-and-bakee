@@ -9,4 +9,5 @@ import java.util.UUID;
 public interface RecipeQueryPort {
     List<RecipeView> findAll();
     Optional<RecipeView> findById(UUID id);
+    List<RecipeView> findByTitleContaining(String titleContaining);
 }

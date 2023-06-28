@@ -24,4 +24,8 @@ public class RecipeViewService {
     public RecipeView findById(String id) {
         return recipeQueryPort.findById(UUID.fromString(id)).get();
     }
+
+    public List<RecipeView> findByTitleContaining(String titleLike) {
+        return recipeQueryPort.findByTitleContaining(titleLike);
+    }
 }

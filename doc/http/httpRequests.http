@@ -7,6 +7,9 @@ GET http://localhost:9090/app/recipes
 ### Get recipe by ID
 GET http://localhost:9090/app/recipes/0c188489-71ff-4c67-93c0-13ac1e3976e2
 
+### Get recipe by title
+GET http://localhost:9090/app/recipes/search?title=igo
+
 ### Post recipe with body 1
 POST http://localhost:9090/app/recipes
 Content-Type: application/json
@@ -14,7 +17,7 @@ Content-Type: application/json
 {
   "title": "Rosół",
   "description": "Gotować kurczaka z warzywami pół dnia",
-  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
   "ingredientIds": [],
   "applianceIds": []
 }
@@ -26,7 +29,7 @@ Content-Type: application/json
 {
   "title": "Bigos",
   "description": "Gotować kapustę",
-  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
   "ingredientIds": [],
   "applianceIds": []
 }
@@ -38,7 +41,7 @@ Content-Type: application/json
 {
   "title": "Pierogi",
   "description": "Zrobić ciasto, farsz i ugotować",
-  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
   "ingredientIds": [],
   "applianceIds": []
 }

@@ -29,4 +29,9 @@ public class RecipeViewEndpoint {
         return ResponseEntity.ok(queryService.findById(id));
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<RecipeView>> getRecipesByTitle(@RequestParam("title") String titleLike) {
+        return ResponseEntity.ok(queryService.findByTitleContaining(titleLike));
+    }
+
 }

@@ -56,6 +56,14 @@ public class RecipeRepositoryAdapter implements RecipeCommandPort, RecipeQueryPo
     }
 
     @Override
+    public List<RecipeView> findByTitleContaining(String titleContaining) {
+        return recipeRepository.findAllByTitleContaining(titleContaining)
+                .stream()
+                .map(recipeViewMapper)
+                .toList();
+    }
+
+    @Override
     public Recipe save(Recipe recipe) {
         RecipeJpa recipeJpa = new RecipeJpa();
         recipeJpa.setTitle(recipe.title());
