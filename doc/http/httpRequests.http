@@ -58,6 +58,13 @@ Content-Type: application/json
 {
   "name": "Jan Kowalski"
 }
+### Post author with body
+POST http://localhost:9090/app/authors
+Content-Type: application/json
+
+{
+  "name": "Tom Zoladz"
+}
 
 ### Get all authors
 GET http://localhost:9090/app/authors

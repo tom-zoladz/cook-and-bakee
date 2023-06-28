@@ -1,11 +1,11 @@
 package com.krajc.cookandbake.cookbook.command.domain.model;
 
-import java.util.List;
 import java.util.UUID;
 
-public record Author(
+public record Kitchen(
         UUID id,
         String name,
-        List<UUID> recipeIds,
-        UUID kitchenId
-) {}
+        String description,
+        UUID authorId
+) {
+}

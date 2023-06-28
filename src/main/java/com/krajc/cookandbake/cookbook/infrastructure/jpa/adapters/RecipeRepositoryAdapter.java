@@ -24,10 +24,10 @@ import java.util.function.Function;
 
 @Component
 public class RecipeRepositoryAdapter implements RecipeCommandPort, RecipeQueryPort {
-    RecipeJpaRepository recipeRepository;
-    AuthorJpaRepository authorRepository;
-    IngredientJpaRepository ingredientRepository;
-    ApplianceJpaRepository applianceJpaRepository;
+    private final RecipeJpaRepository recipeRepository;
+    private AuthorJpaRepository authorRepository;
+    private final IngredientJpaRepository ingredientRepository;
+    private final ApplianceJpaRepository applianceJpaRepository;
 
 
     public RecipeRepositoryAdapter(
@@ -78,7 +78,11 @@ public class RecipeRepositoryAdapter implements RecipeCommandPort, RecipeQueryPo
                 recipeJpa.getId(),
                 recipeJpa.getTitle(),
                 recipeJpa.getDescription(),
-                new AuthorView(authorJpa.getId(), authorJpa.getName(), authorJpa.getRecipes().stream().map(RecipeJpa::getId).toList()),
+                new AuthorView(
+                        authorJpa.getId(),
+                        authorJpa.getName(),
+                        authorJpa.getRecipes().stream().map(RecipeJpa::getId).toList(),
+                        authorJpa.getKitchen().getId()),
                 recipeJpa.getIngredients().stream()
                         .map(ingredientJpa -> new IngredientView(
                                         ingredientJpa.getId(),

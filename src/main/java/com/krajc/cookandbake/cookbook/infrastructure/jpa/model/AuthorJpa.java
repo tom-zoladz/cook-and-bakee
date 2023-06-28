@@ -18,6 +18,10 @@ public class AuthorJpa {
     @OneToMany(mappedBy = "author", cascade = REMOVE, orphanRemoval = true)
     private List<RecipeJpa> recipes;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "kitchen_id")
+    private KitchenJpa kitchen;
+
     public AuthorJpa() {
     }
 
@@ -45,5 +49,13 @@ public class AuthorJpa {
     //TODO exceptions
     public void setRecipes(List<RecipeJpa> recipes) {
         this.recipes = recipes;
+    }
+
+    public KitchenJpa getKitchen() {
+        return kitchen;
+    }
+
+    public void setKitchen(KitchenJpa kitchen) {
+        this.kitchen = kitchen;
     }
 }
