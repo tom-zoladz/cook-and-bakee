@@ -35,6 +35,14 @@ public class RecipeJpa {
     public RecipeJpa() {
     }
 
+    public RecipeJpa(UUID id, String title, String description, AuthorJpa author, List<IngredientJpa> ingredients, List<ApplianceJpa> appliances) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.author = author;
+        this.ingredients = ingredients;
+        this.appliances = appliances;
+    }
 
     public UUID getId() {
         return id;

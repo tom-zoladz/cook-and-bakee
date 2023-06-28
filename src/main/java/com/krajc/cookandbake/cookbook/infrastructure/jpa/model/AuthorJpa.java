@@ -25,6 +25,12 @@ public class AuthorJpa {
     public AuthorJpa() {
     }
 
+    public AuthorJpa(UUID id, String name, List<RecipeJpa> recipes, KitchenJpa kitchen) {
+        this.id = id;
+        this.name = name;
+        this.recipes = recipes;
+        this.kitchen = kitchen;
+    }
 
     public UUID getId() {
         return id;
