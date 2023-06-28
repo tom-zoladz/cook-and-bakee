@@ -25,7 +25,10 @@ public class RecipeJpa {
             inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
     private List<IngredientJpa> ingredients;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(name = "appliance_recipe",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "appliance_id"))
     private List<ApplianceJpa> appliances;
 
 
