@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Recipe")
+@Table(name = "recipe")
 public class RecipeJpa {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -15,32 +15,26 @@ public class RecipeJpa {
     private String title;
     private String description;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "author_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "author_id")
     private AuthorJpa author;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(name = "ingredient_recipe",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
     private List<IngredientJpa> ingredients;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(name = "appliance_recipe",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "appliance_id"))
     private List<ApplianceJpa> appliances;
 
 
     public RecipeJpa() {
     }
 
-    public RecipeJpa(
-            String title,
-            String description,
-            AuthorJpa author,
-            List<IngredientJpa> ingredients,
-            List<ApplianceJpa> appliances) {
-        this.title = title;
-        this.description = description;
-        this.author = author;
-        this.ingredients = ingredients;
-        this.appliances = appliances;
-    }
 
     public UUID getId() {
         return id;

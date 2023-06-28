@@ -2,10 +2,11 @@ package com.krajc.cookandbake.cookbook.infrastructure.jpa.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Ingredient")
+@Table(name = "ingredient")
 public class IngredientJpa {
 
     @Id
@@ -14,11 +15,13 @@ public class IngredientJpa {
     private UUID id;
     private String name;
 
-    public IngredientJpa() {
-    }
+    @ManyToMany
+    @JoinTable(name = "ingredient_recipe",
+            joinColumns = @JoinColumn(name = "ingredient_id"),
+            inverseJoinColumns = @JoinColumn(name = "recipe_id"))
+    private List<RecipeJpa> recipes;
 
-    public IngredientJpa(String name) {
-        this.name = name;
+    public IngredientJpa() {
     }
 
     public UUID getId() {

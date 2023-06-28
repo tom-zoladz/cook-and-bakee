@@ -2,9 +2,11 @@ package com.krajc.cookandbake.cookbook.infrastructure.jpa.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 
 @Entity
-@Table(name = "Appliance")
+@Table(name = "appliance")
 public class ApplianceJpa {
 
     @Id
@@ -12,12 +14,13 @@ public class ApplianceJpa {
     @Column(name = "appliance_id")
     private Long id;
     private String name;
+    @ManyToMany
+    @JoinTable(name = "appliance_recipe",
+            joinColumns = @JoinColumn(name = "appliance_id"),
+            inverseJoinColumns = @JoinColumn(name = "recipe_id"))
+    private List<RecipeJpa> recipes;
 
     public ApplianceJpa() {
-    }
-
-    public ApplianceJpa(String name) {
-        this.name = name;
     }
 
     public Long getId() {

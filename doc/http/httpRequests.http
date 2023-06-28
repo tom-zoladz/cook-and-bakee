@@ -4,51 +4,84 @@ GET http://localhost:9090/hello
 ### Get all recipes
 GET http://localhost:9090/app/recipes
 
-### Post recipe with body
+### Get recipe by ID
+GET http://localhost:9090/app/recipes/0c188489-71ff-4c67-93c0-13ac1e3976e2
+
+### Get recipe by title
+GET http://localhost:9090/app/recipes/search?title=igo
+
+### Post recipe with body 1
 POST http://localhost:9090/app/recipes
 Content-Type: application/json
 
 {
-  "title": "Rosol",
-  "description": "Wrzucic kurczaka i gotowac z przyprawami oraz warzywami",
-  "author": {
-    "name": "Tomasz Zoladz"
-  },
-  "ingredients": [
-    {
-      "name": "Kurczak"
-    },
-    {
-      "name": "Przyprawy"
-    },
-    {
-      "name": "Warzywa"
-    }
-  ],
-  "appliances": [
-    {
-      "name": "Garnek"
-    },
-    {
-      "name": "Kuchenka"
-    },
-    {
-      "name": "Chochla"
-    }
-  ]
+  "title": "Rosół",
+  "description": "Gotować kurczaka z warzywami pół dnia",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
+  "ingredientIds": [],
+  "applianceIds": []
 }
 
-### Patch recipe with title
-PATCH http://localhost:9090/app/recipes/title?id=714f7c19-ca02-432c-8622-823b6aa5ace0&title=Śmieszny bigos z warzywkami
-
-### Patch recipe with description
-PATCH http://localhost:9090/app/recipes/description
+### Post recipe with body 2
+POST http://localhost:9090/app/recipes
 Content-Type: application/json
 
 {
-  "recipeId": "714f7c19-ca02-432c-8622-823b6aa5ace0",
-  "description": "Wrzucic kurczaka i gotowac z przyprawami, warzywami i kapustą kiszoną"
+  "title": "Bigos",
+  "description": "Gotować kapustę",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
+  "ingredientIds": [],
+  "applianceIds": []
+}
+
+### Post recipe with body 3
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+
+{
+  "title": "Pierogi",
+  "description": "Zrobić ciasto, farsz i ugotować",
+  "authorId": "c483cb30-8f3c-402f-8561-114346bce642",
+  "ingredientIds": [],
+  "applianceIds": []
 }
 
 ### Delete recipe by ID
-DELETE http://localhost:9090/app/recipes?id=714f7c19-ca02-432c-8622-823b6aa5ace0
+DELETE http://localhost:9090/app/recipes?id=bf5beb60-665e-41c9-8fbc-3d7cbe7af3c7
+
+
+
+
+
+
+### Post author with body
+POST http://localhost:9090/app/authors
+Content-Type: application/json
+
+{
+  "name": "Jan Kowalski"
+}
+### Post author with body
+POST http://localhost:9090/app/authors
+Content-Type: application/json
+
+{
+  "name": "Tom Zoladz"
+}
+
+### Get all authors
+GET http://localhost:9090/app/authors
+
+### Get author by ID
+GET http://localhost:9090/app/authors/f6769d95-24f5-426e-9c42-1b4efed298c5
+
+### Delete author by ID
+DELETE http://localhost:9090/app/authors?id=0d52fc44-63b0-4b60-bdfa-f5e9e137ecb6
+
+
+
+### Get all kitchens
+GET http://localhost:9090/app/kitchens
+
+### Get kitchen by ID
+GET http://localhost:9090/app/kitchens/f83f2e46-d09e-4c51-a131-36bb0a3d7aa4
