@@ -15,8 +15,8 @@ public class RecipeJpa {
     private String title;
     private String description;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "author_id")
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "author_id")
     private AuthorJpa author;
 
     @ManyToMany(cascade = CascadeType.ALL)

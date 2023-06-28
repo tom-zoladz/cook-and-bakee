@@ -4,6 +4,8 @@ import com.krajc.cookandbake.cookbook.command.domain.model.Recipe;
 import com.krajc.cookandbake.cookbook.command.ports.RecipeCommandPort;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 
 @Service
 public class RecipeService {
@@ -17,4 +19,7 @@ public class RecipeService {
         return recipeCommandPort.save(recipe);
     }
 
+    public void deleteById(String id) {
+        recipeCommandPort.deleteById(UUID.fromString(id));
+    }
 }

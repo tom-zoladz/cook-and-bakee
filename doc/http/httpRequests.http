@@ -5,19 +5,47 @@ GET http://localhost:9090/hello
 GET http://localhost:9090/app/recipes
 
 ### Get recipe by ID
-GET http://localhost:9090/app/recipes/c70df1a1-945e-4b4f-8ae1-a42f7d295f27
+GET http://localhost:9090/app/recipes/0c188489-71ff-4c67-93c0-13ac1e3976e2
 
-### Post recipe with body
+### Post recipe with body 1
 POST http://localhost:9090/app/recipes
 Content-Type: application/json
 
 {
-  "title": "Salatka",
-  "description": "Zmieszac wszystkie skladniki dokladnie",
-  "authorId": "40bb900f-91ab-4614-abb9-a642da9c1181",
+  "title": "Rosół",
+  "description": "Gotować kurczaka z warzywami pół dnia",
+  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
   "ingredientIds": [],
   "applianceIds": []
 }
+
+### Post recipe with body 2
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+
+{
+  "title": "Bigos",
+  "description": "Gotować kapustę",
+  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
+  "ingredientIds": [],
+  "applianceIds": []
+}
+
+### Post recipe with body 3
+POST http://localhost:9090/app/recipes
+Content-Type: application/json
+
+{
+  "title": "Pierogi",
+  "description": "Zrobić ciasto, farsz i ugotować",
+  "authorId": "bf28c26a-7970-4d2b-8477-47f3bdcf66e4",
+  "ingredientIds": [],
+  "applianceIds": []
+}
+
+### Delete recipe by ID
+DELETE http://localhost:9090/app/recipes?id=bf5beb60-665e-41c9-8fbc-3d7cbe7af3c7
+
 
 
 
@@ -28,11 +56,22 @@ POST http://localhost:9090/app/authors
 Content-Type: application/json
 
 {
-  "name": "Stanisław Nowak"
+  "name": "Jan Kowalski"
 }
 
 ### Get all authors
 GET http://localhost:9090/app/authors
 
 ### Get author by ID
-GET http://localhost:9090/app/authors/5c03d221-701d-42bf-bf66-8361b5bfd933
+GET http://localhost:9090/app/authors/f6769d95-24f5-426e-9c42-1b4efed298c5
+
+### Delete author by ID
+DELETE http://localhost:9090/app/authors?id=0d52fc44-63b0-4b60-bdfa-f5e9e137ecb6
+
+
+
+### Get all kitchens
+GET http://localhost:9090/app/kitchens
+
+### Get kitchen by ID
+GET http://localhost:9090/app/kitchens/f83f2e46-d09e-4c51-a131-36bb0a3d7aa4

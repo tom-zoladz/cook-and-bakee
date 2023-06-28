@@ -43,6 +43,11 @@ public class AuthorRepositoryAdapter implements AuthorCommandPort, AuthorQueryPo
         return authorMapper.apply(savedAuthor);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        authorRepository.deleteById(id);
+    }
+
     private final Function<AuthorJpa, AuthorView> authorViewMapper = authorJpa ->
             new AuthorView(
                     authorJpa.getId(),

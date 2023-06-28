@@ -67,6 +67,11 @@ public class RecipeRepositoryAdapter implements RecipeCommandPort, RecipeQueryPo
         return recipeMapper.apply(savedRecipe);
     }
 
+    @Override
+    public void deleteById(UUID id) {
+        recipeRepository.deleteById(id);
+    }
+
     private final Function<RecipeJpa, RecipeView> recipeViewMapper = recipeJpa -> {
         AuthorJpa authorJpa = authorRepository.findById(recipeJpa.getAuthor().getId()).get(); //TODO exceptions
         return new RecipeView(

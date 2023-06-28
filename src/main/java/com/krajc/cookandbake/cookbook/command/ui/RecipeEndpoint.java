@@ -20,4 +20,10 @@ public class RecipeEndpoint {
         Recipe responseBody = service.save(recipe);
         return ResponseEntity.ok(responseBody);
     }
+
+    @DeleteMapping
+    public ResponseEntity<Void> deleteRecipe(@RequestParam String id) {
+        service.deleteById(id);
+        return ResponseEntity.ok().build();
+    }
 }
