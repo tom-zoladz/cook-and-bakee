@@ -19,7 +19,10 @@ public class RecipeJpa {
     @JoinColumn(name = "author_id")
     private AuthorJpa author;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
+    @JoinTable(name = "ingredient_recipe",
+            joinColumns = @JoinColumn(name = "recipe_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
     private List<IngredientJpa> ingredients;
 
     @ManyToMany(cascade = CascadeType.ALL)
